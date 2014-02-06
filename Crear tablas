@@ -1,0 +1,19 @@
+CREATE TABLE Videojuegos(
+ID_videogame INTEGER,
+TITULO VARCHAR2(80),
+Creador VARCHAR2(80),
+SINOPSIS VARCHAR2(500),
+CONSTRAINT ID_videogame_PK PRIMARY KEY (ID_videogame))
+
+
+
+
+CREATE TABLE costos(ID_videogame INTEGER, costo integer,CONSTRAINT ID_videogame_FK_HR FOREIGN KEY (ID_videogame) 
+REFERENCES Videojuegos (ID_videogame))
+
+
+
+INSERT INTO Videojuegos VALUES(1,'Halo','Microsoft','Disparos y aliens')
+
+
+INSERT INTO costos VALUES(1,999);
