@@ -1,0 +1,17 @@
+CREATE OR REPLACE insertar_usuario(my_id IN Integer,my_nombre IN varchar2,my_edad IN Integer) AS
+BEGIN
+IF my_edad<18 THEN
+RAISE_APPLICATION_ERROR(-20,000,'Lo siento eres pequeño');
+ELSE
+insert into usuario values(my_id,my_nombre,my_edad);
+imprime ('usuario guardado con exito');
+END IF;
+END;
+/
+
+
+Para probar:
+
+BEGIN
+Insertar_usuario(5,'Alejandro',15)
+END;/
