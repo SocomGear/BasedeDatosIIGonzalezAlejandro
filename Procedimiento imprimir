@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE imprime(hola IN varchar2) AS
+BEGIN
+DBMS_OUTPUT.PUT_LINE('hola' || hola);
+END;
+/
+
+
+Prueba:
+
+BEGIN
+imprime('hola');
+END;
+/
